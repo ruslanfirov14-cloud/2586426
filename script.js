@@ -90,6 +90,56 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// Открытие фото в полном размере (lightbox)
+document.addEventListener('DOMContentLoaded', function() {
+    const galleryImages = document.querySelectorAll('.gallery-image img');
+    if (!galleryImages.length) return;
+
+    const lightbox = document.createElement('div');
+    lightbox.className = 'lightbox';
+    lightbox.innerHTML = `
+        <button class="lightbox-close" aria-label="Закрыть">&times;</button>
+        <img class="lightbox-image" src="" alt="">
+    `;
+
+    const lightboxImage = lightbox.querySelector('.lightbox-image');
+    const closeButton = lightbox.querySelector('.lightbox-close');
+
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    function openLightbox(src, alt) {
+        lightboxImage.src = src;
+        lightboxImage.alt = alt || 'Фото работы';
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    galleryImages.forEach((img) => {
+        img.addEventListener('click', function() {
+            openLightbox(this.src, this.alt);
+        });
+    });
+
+    closeButton.addEventListener('click', closeLightbox);
+
+    lightbox.addEventListener('click', function(e) {
+        if (e.target === lightbox) {
+            closeLightbox();
+        }
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+            closeLightbox();
+        }
+    });
+
+    document.body.appendChild(lightbox);
+});
+
 // Система отзывов
 document.addEventListener('DOMContentLoaded', function() {
     // Кнопка "Оставить отзыв"

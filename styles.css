@@ -627,6 +627,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 300px;
     object-fit: cover;
     transition: var(--transition);
+    cursor: zoom-in;
 }
 
 .gallery-overlay {
@@ -684,6 +685,40 @@ h1, h2, h3, h4, h5, h6 {
 
 .gallery-time {
     color: rgba(255, 255, 255, 0.9);
+}
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.88);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 5000;
+    padding: 20px;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox-image {
+    max-width: min(1200px, 95vw);
+    max-height: 90vh;
+    border-radius: 10px;
+    box-shadow: var(--shadow-heavy);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 2.4rem;
+    line-height: 1;
+    border: none;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
 }
 
 /* Страница отзывов */
