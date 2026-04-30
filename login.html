@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход и регистрация - Маникюрный салон «Вера»</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>«Вера»</h1>
+                    <p>Маникюрный салон</p>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Главная</a></li>
+                        <li><a href="services.html" class="nav-link">Услуги</a></li>
+                        <li><a href="gallery.html" class="nav-link">Галерея</a></li>
+                        <li><a href="reviews.html" class="nav-link">Отзывы</a></li>
+                        <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+                        <li><a href="login.html" class="nav-link active">Вход</a></li>
+                    </ul>
+                </nav>
+                <div class="burger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Личный кабинет</h1>
+                <p>Войдите в аккаунт или создайте новый</p>
+            </div>
+        </section>
+
+        <section class="review-form-section">
+            <div class="container">
+                <div class="booking-content">
+                    <div class="form-container">
+                        <h2>Вход</h2>
+                        <form id="loginForm">
+                            <div class="form-group">
+                                <label for="loginEmail">Email *</label>
+                                <input type="email" id="loginEmail" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="loginPassword">Пароль *</label>
+                                <input type="password" id="loginPassword" name="password" minlength="6" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">Войти</button>
+                        </form>
+                    </div>
+
+                    <div class="form-container">
+                        <h2>Регистрация</h2>
+                        <form id="registerForm">
+                            <div class="form-group">
+                                <label for="registerName">Имя *</label>
+                                <input type="text" id="registerName" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="registerEmail">Email *</label>
+                                <input type="email" id="registerEmail" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="registerPassword">Пароль *</label>
+                                <input type="password" id="registerPassword" name="password" minlength="6" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">Зарегистрироваться</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>«Вера»</h3>
+                    <p>Маникюрный салон</p>
+                    <div class="social-links">
+                        <a href="https://vk.ru/id90062297" aria-label="VK"><i class="fab fa-vk"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="services.html">Услуги</a></li>
+                        <li><a href="gallery.html">Галерея</a></li>
+                        <li><a href="reviews.html">Отзывы</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <p><i class="fas fa-phone"></i> 8 (904) 777-32-15</p>
+                    <p><i class="fas fa-map-marker-alt"></i> г. Волгоград, Рабоче-Крестьянская ул., 9</p>
+                    <p><i class="fas fa-clock"></i> Пн-Сб: 10:00 - 20:00</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Маникюрный салон «Вера». Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

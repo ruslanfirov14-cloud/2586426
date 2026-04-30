@@ -1,0 +1,73 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserRole {
+  admin
+  client
+}
+
+enum BookingStatus {
+  pending
+  confirmed
+  cancelled
+}
+
+enum ReviewStatus {
+  pending
+  approved
+}
+
+model User {
+  id           Int       @id @default(autoincrement())
+  name         String
+  email        String    @unique
+  passwordHash String    @map("password_hash")
+  role         UserRole  @default(client)
+  createdAt    DateTime  @default(now()) @map("created_at")
+  bookings     Booking[]
+  reviews      Review[]
+
+  @@map("Users")
+}
+
+model Booking {
+  id          Int           @id @default(autoincrement())
+  userId      Int?          @map("user_id")
+  name        String
+  phone       String
+  email       String
+  service     String
+  bookingDate DateTime      @map("booking_date") @db.Date
+  bookingTime String        @map("booking_time")
+  message     String?
+  status      BookingStatus @default(pending)
+  createdAt   DateTime      @default(now()) @map("created_at")
+  user        User?         @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  @@map("Bookings")
+}
+
+model Review {
+  id        Int          @id @default(autoincrement())
+  userId    Int?         @map("user_id")
+  name      String
+  service   String
+  rating    Int
+  content   String
+  status    ReviewStatus @default(pending)
+  createdAt DateTime     @default(now()) @map("created_at")
+  user      User?        @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  @@map("Reviews")
+}

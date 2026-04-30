@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отзывы - Маникюрный салон «Вера»</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>«Вера»</h1>
+                    <p>Маникюрный салон</p>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Главная</a></li>
+                        <li><a href="services.html" class="nav-link">Услуги</a></li>
+                        <li><a href="gallery.html" class="nav-link">Галерея</a></li>
+                        <li><a href="reviews.html" class="nav-link active">Отзывы</a></li>
+                        <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+                        <li><a href="login.html" class="nav-link">Вход</a></li>
+                    </ul>
+                </nav>
+                <div class="burger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Отзывы наших клиентов</h1>
+                <p>Что говорят о нас те, кто уже посетил наш салон</p>
+            </div>
+        </section>
+
+        <section class="reviews-stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">4.9</div>
+                        <div class="stat-label">Средняя оценка</div>
+                        <div class="stat-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">250+</div>
+                        <div class="stat-label">Довольных клиентов</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">5 лет</div>
+                        <div class="stat-label">На рынке</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="reviews">
+            <div class="container">
+                <div class="reviews-controls">
+                    <div class="sort-options">
+                        <button class="sort-btn active" data-sort="newest">Новые</button>
+                        <button class="sort-btn" data-sort="rating">По рейтингу</button>
+                    </div>
+                    <button class="btn btn-primary" id="addReviewBtn">Оставить отзыв</button>
+                </div>
+
+                <div class="reviews-list" id="reviewsList"></div>
+
+                <div class="load-more">
+                    <button class="btn btn-outline" id="loadMoreBtn">Показать еще</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="review-form-section" id="reviewFormSection" style="display: none;">
+            <div class="container">
+                <div class="form-container">
+                    <h2>Оставить отзыв</h2>
+                    <form id="reviewForm">
+                        <div class="form-group">
+                            <label for="name">Ваше имя *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Услуга *</label>
+                            <select id="service" name="service" required>
+                                <option value="">Выберите услугу</option>
+                                <optgroup label="Комплексные предложения">
+                                    <option value="Маникюр + покрытие гель-лак">Маникюр + покрытие гель-лак</option>
+                                    <option value="Педикюр полный с гель-лаком">Педикюр полный с гель-лаком</option>
+                                    <option value="Наращивание ногтей">Наращивание ногтей</option>
+                                </optgroup>
+                                <optgroup label="Дополнительные услуги">
+                                    <option value="Снятие покрытия">Снятие покрытия</option>
+                                    <option value="Маникюр">Маникюр</option>
+                                    <option value="Покрытие гель-лак">Покрытие гель-лак</option>
+                                    <option value="Пальчики (ноги)">Пальчики (ноги)</option>
+                                    <option value="Пальчики + стопа">Пальчики + стопа</option>
+                                    <option value="Пальчики гель-лак">Пальчики гель-лак</option>
+                                    <option value="Обработка стопы">Обработка стопы</option>
+                                    <option value="Ремонт ногтя">Ремонт ногтя</option>
+                                    <option value="Наращивание">Наращивание</option>
+                                    <option value="Укрепление пудрой">Укрепление пудрой</option>
+                                    <option value="Укрепление гелем">Укрепление гелем</option>
+                                    <option value="Френч, Втирка">Френч, Втирка</option>
+                                    <option value="Дизайн ногтя">Дизайн ногтя</option>
+                                    <option value="Покрытие обычным лаком">Покрытие обычным лаком</option>
+                                    <option value="Обпил формы без маникюра">Обпил формы без маникюра</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Оценка *</label>
+                            <div class="rating-input">
+                                <i class="far fa-star" data-rating="1"></i>
+                                <i class="far fa-star" data-rating="2"></i>
+                                <i class="far fa-star" data-rating="3"></i>
+                                <i class="far fa-star" data-rating="4"></i>
+                                <i class="far fa-star" data-rating="5"></i>
+                                <input type="hidden" id="rating" name="rating" value="0" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="review">Ваш отзыв *</label>
+                            <textarea id="review" name="review" rows="5" required placeholder="Расскажите о вашем посещении салона..."></textarea>
+                        </div>
+                        
+                        <div class="form-buttons">
+                            <button type="submit" class="btn btn-primary">Отправить отзыв</button>
+                            <button type="button" class="btn btn-outline" id="cancelReviewBtn">Отмена</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>«Вера»</h3>
+                    <p>Маникюрный салон</p>
+                    <div class="social-links">
+                        <a href="https://vk.ru/id90062297" aria-label="VK"><i class="fab fa-vk"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="services.html">Услуги</a></li>
+                        <li><a href="gallery.html">Галерея</a></li>
+                        <li><a href="reviews.html">Отзывы</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <p><i class="fas fa-phone"></i> 8 (904) 777-32-15</p>
+                    <p><i class="fas fa-map-marker-alt"></i> г. Волгоград, Рабоче-Крестьянская ул., 9</p>
+                    <p><i class="fas fa-clock"></i> Пн-Сб: 10:00 - 20:00</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Маникюрный салон «Вера». Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

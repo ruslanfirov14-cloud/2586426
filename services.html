@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги - Маникюрный салон «Вера»</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>«Вера»</h1>
+                    <p>Маникюрный салон</p>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Главная</a></li>
+                        <li><a href="services.html" class="nav-link active">Услуги</a></li>
+                        <li><a href="gallery.html" class="nav-link">Галерея</a></li>
+                        <li><a href="reviews.html" class="nav-link">Отзывы</a></li>
+                        <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+                        <li><a href="login.html" class="nav-link">Вход</a></li>
+                    </ul>
+                </nav>
+                <div class="burger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Наши услуги</h1>
+                <p>Полный спектр услуг по уходу за ногтями</p>
+            </div>
+        </section>
+
+        <section class="services">
+            <div class="container">
+                <div class="services-categories">
+                    <div class="category-tabs">
+                        <button class="category-tab active" data-category="complex">Комплекс</button>
+                        <button class="category-tab" data-category="additional">Дополнительные услуги</button>
+                    </div>
+                </div>
+
+                <div class="services-content">
+                    <div class="category-content active" id="complex">
+                        <h2 class="category-title">Комплексные предложения</h2>
+                        <div class="services-grid">
+                            <div class="service-card featured">
+                                <div class="service-icon">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h3>Маникюр + покрытие гель-лак</h3>
+                                <p class="service-description">Полный комплекс по уходу за ногтями с качественным покрытием</p>
+                                <ul class="service-includes">
+                                    <li>Классический маникюр</li>
+                                    <li>Базовое и топовое покрытие</li>
+                                    <li>Покрытие гель-лаком</li>
+                                    <li>Сушка под лампой</li>
+                                </ul>
+                                <div class="service-price">1700₽</div>
+                                <div class="service-duration">2 часа</div>
+                                <div class="service-badge">Выгодно</div>
+                            </div>
+
+                            <div class="service-card featured">
+                                <div class="service-icon">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h3>Педикюр полный с гель-лаком</h3>
+                                <p class="service-description">Комплексный уход за стопами с стойким покрытием</p>
+                                <ul class="service-includes">
+                                    <li>Ванночка для ног</li>
+                                    <li>Обработка стоп и пальчиков</li>
+                                    <li>Удаление мозолей</li>
+                                    <li>Покрытие гель-лаком</li>
+                                </ul>
+                                <div class="service-price">2300₽</div>
+                                <div class="service-duration">2.5 часа</div>
+                                <div class="service-badge">Популярно</div>
+                            </div>
+
+                            <div class="service-card featured">
+                                <div class="service-icon">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h3>Наращивание ногтей</h3>
+                                <p class="service-description">Создание идеальной формы и длины с покрытием</p>
+                                <ul class="service-includes">
+                                    <li>Подготовка натуральных ногтей</li>
+                                    <li>Наращивание формы</li>
+                                    <li>Моделирование</li>
+                                    <li>Покрытие гель-лак</li>
+                                </ul>
+                                <div class="service-price">2500₽</div>
+                                <div class="service-duration">2.5 часа</div>
+                                <div class="service-badge">Новинка</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="category-content" id="additional">
+                        <h2 class="category-title">Дополнительные услуги</h2>
+                        <p class="category-description">Услуги, не входящие в комплекс, оплачиваются отдельно</p>
+                        <div class="services-grid-small">
+                            <div class="service-item">
+                                <h4>Снятие покрытия</h4>
+                                <div class="service-price-small">300₽</div>
+                            </div>
+                            <div class="service-item">
+                                <h4>Маникюр</h4>
+                                <div class="service-price-small">1300₽</div>
+                            </div>
+                            <div class="service-item">
+                                <h4>Покрытие гель-лак</h4>
+                                <div class="service-price-small">1300₽</div>
+                            </div>
+                            <div class="service-item">
+                                <h4>Пальчики (ноги)</h4>
+                                <div class="service-price-small">1300₽</div>
+                            </div>
+                            <div class="service-item">
+                                <h4>Пальчики + стопа</h4>
+                                <div class="service-price-small">1900₽</div>
+                            </div>
+                            <div class="service-item">
+                                <h4>Пальчики гель-лак</h4>
+                                <div class="service-price-small">1800₽</div>
+                            </div>
+                            <div class="service-item">
+                                <h4>Обработка стопы</h4>
+                                <div class="service-price-small">1300₽</div>
+                            </div>
+                            <div class="service-item">
+                                <h4>Ремонт ногтя</h4>
+                                <div class="service-price-small">100₽</div>
+                            </div>
+                            <div class="service-item">
+                                <h4>Наращивание</h4>
+                                <div class="service-price-small">170₽</div>
+                            </div>
+                            <div class="service-item">
+                                <h4>Укрепление пудрой</h4>
+                                <div class="service-price-small">200₽</div>
+                            </div>
+                            <div class="service-item">
+                                <h4>Укрепление гелем</h4>
+                                <div class="service-price-small">300₽</div>
+                            </div>
+                            <div class="service-item">
+                                <h4>Френч, Втирка</h4>
+                                <div class="service-price-small">600₽</div>
+                            </div>
+                            <div class="service-item">
+                                <h4>Дизайн ногтя</h4>
+                                <div class="service-price-small">100₽</div>
+                            </div>
+                            <div class="service-item">
+                                <h4>Покрытие обычным лаком</h4>
+                                <div class="service-price-small">150₽</div>
+                            </div>
+                            <div class="service-item">
+                                <h4>Обпил формы без маникюра</h4>
+                                <div class="service-price-small">100₽</div>
+                            </div>
+                        </div>
+                        
+                        <div class="bonus-section">
+                            <div class="bonus-card">
+                                <div class="bonus-icon">
+                                    <i class="fas fa-gift"></i>
+                                </div>
+                                <h3>Приятный бонус</h3>
+                                <p>Массаж рук, стоп, чай, кофе, конфетки — бесплатно для наших клиентов!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Готовы к идеальному маникюру?</h2>
+                    <p>Запишитесь на прием и получите скидку 10% на первую услугу</p>
+                    <a href="contacts.html" class="btn btn-primary">Записаться сейчас</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>«Вера»</h3>
+                    <p>Маникюрный салон</p>
+                    <div class="social-links">
+                        <a href="https://vk.ru/id90062297" aria-label="VK"><i class="fab fa-vk"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="services.html">Услуги</a></li>
+                        <li><a href="gallery.html">Галерея</a></li>
+                        <li><a href="reviews.html">Отзывы</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <p><i class="fas fa-phone"></i> 8 (904) 777-32-15</p>
+                    <p><i class="fas fa-map-marker-alt"></i> г. Волгоград, Рабоче-Крестьянская ул., 9</p>
+                    <p><i class="fas fa-clock"></i> Пн-Сб: 10:00 - 20:00</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Маникюрный салон «Вера». Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

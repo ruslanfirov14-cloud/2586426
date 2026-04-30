@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея - Маникюрный салон «Вера»</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>«Вера»</h1>
+                    <p>Маникюрный салон</p>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Главная</a></li>
+                        <li><a href="services.html" class="nav-link">Услуги</a></li>
+                        <li><a href="gallery.html" class="nav-link active">Галерея</a></li>
+                        <li><a href="reviews.html" class="nav-link">Отзывы</a></li>
+                        <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+                        <li><a href="login.html" class="nav-link">Вход</a></li>
+                    </ul>
+                </nav>
+                <div class="burger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Галерея работ</h1>
+                <p>Наши лучшие работы и идеи для вдохновения</p>
+            </div>
+        </section>
+
+        <section class="gallery-categories">
+            <div class="container">
+                <div class="category-filters">
+                    <button class="filter-btn active" data-category="all">Все работы</button>
+                    <button class="filter-btn" data-category="manicure">Маникюр</button>
+                    <button class="filter-btn" data-category="design">Дизайн</button>
+                    <button class="filter-btn" data-category="pedicure">Педикюр</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <div class="container">
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-category="manicure">
+                        <div class="gallery-image">
+                            <img src="gallery/1.jpg" alt="Работа №1">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h3>Работа №1</h3>
+                                    <p>Снятие прошлого покрытия, комбинированный маникюр, покрытие гель-лаком</p>
+                                    <div class="gallery-details">
+                                        <span class="gallery-price">1700₽</span>
+                                        <span class="gallery-time">1ч 40мин</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="design">
+                        <div class="gallery-image">
+                            <img src="gallery/2.jpg" alt="Работа №2">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h3>Работа №2</h3>
+                                    <p>Снятие прошлого покрытия, комбинированный маникюр, покрытие камуфляжной базой в технике «Французский маникюр»</p>
+                                    <div class="gallery-details">
+                                        <span class="gallery-price">2300₽</span>
+                                        <span class="gallery-time">2ч 10мин</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="manicure">
+                        <div class="gallery-image">
+                            <img src="gallery/3.jpg" alt="Работа №3">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h3>Работа №3</h3>
+                                    <p>Запрос клиента: что-то нежное, нюдовое. Сделано снятие прошлого покрытия, комбинированный маникюр, покрытие нюдовым гелем</p>
+                                    <div class="gallery-details">
+                                        <span class="gallery-price">1700₽</span>
+                                        <span class="gallery-time">1ч 50мин</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="design">
+                        <div class="gallery-image">
+                            <img src="gallery/Вечерний дизайн.jfif" alt="Вечерний дизайн">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h3>Вечерний дизайн</h3>
+                                    <p>Стразы и блеск для особенных случаев</p>
+                                    <div class="gallery-details">
+                                        <span class="gallery-price">от 500₽</span>
+                                        <span class="gallery-time">30мин</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="pedicure">
+                        <div class="gallery-image">
+                            <img src="gallery/Классический педикюр.jfif" alt="Педикюр">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h3>Классический педикюр</h3>
+                                    <p>Уход за ногами и идеальное покрытие</p>
+                                    <div class="gallery-details">
+                                        <span class="gallery-price">1500₽</span>
+                                        <span class="gallery-time">1ч</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="manicure">
+                        <div class="gallery-image">
+                            <img src="gallery/Классический красный.jfif" alt="Красный маникюр">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h3>Классический красный</h3>
+                                    <p>Вечная классика в современном исполнении</p>
+                                    <div class="gallery-details">
+                                        <span class="gallery-price">1200₽</span>
+                                        <span class="gallery-time">1ч 30мин</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Вдохновились?</h2>
+                    <p>Запишитесь на прием и мы создадим для вас идеальный маникюр</p>
+                    <a href="contacts.html" class="btn btn-primary">Записаться сейчас</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>«Вера»</h3>
+                    <p>Маникюрный салон</p>
+                    <div class="social-links">
+                        <a href="https://vk.ru/id90062297" aria-label="VK"><i class="fab fa-vk"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="services.html">Услуги</a></li>
+                        <li><a href="gallery.html">Галерея</a></li>
+                        <li><a href="reviews.html">Отзывы</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <p><i class="fas fa-phone"></i> 8 (904) 777-32-15</p>
+                    <p><i class="fas fa-map-marker-alt"></i> г. Волгоград, Рабоче-Крестьянская ул., 9</p>
+                    <p><i class="fas fa-clock"></i> Пн-Сб: 10:00 - 20:00</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Маникюрный салон «Вера». Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
