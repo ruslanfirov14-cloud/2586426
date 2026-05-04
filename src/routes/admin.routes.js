@@ -9,6 +9,7 @@ router.use(requireAuth, requireAdmin);
 router.get("/bookings", async (req, res) => {
   try {
     const bookings = await prisma.booking.findMany({
+      where: { status: "pending" },
       orderBy: { createdAt: "desc" },
     });
     return res.json({ bookings });

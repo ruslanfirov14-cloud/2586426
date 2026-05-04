@@ -612,6 +612,7 @@ h1, h2, h3, h4, h5, h6 {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
+    align-items: start;
 }
 
 .gallery-item {
@@ -620,6 +621,27 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-light);
     cursor: pointer;
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    max-height: 420px;
+    transition:
+        opacity 0.55s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.55s cubic-bezier(0.4, 0, 0.2, 1),
+        max-height 0.55s cubic-bezier(0.4, 0, 0.2, 1),
+        margin 0.45s ease,
+        box-shadow 0.45s ease;
+    will-change: opacity, transform;
+}
+
+.gallery-item.gallery-item--hidden {
+    opacity: 0;
+    transform: translateY(16px) scale(0.94);
+    pointer-events: none;
+    max-height: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    overflow: hidden;
+    box-shadow: none;
 }
 
 .gallery-image img {

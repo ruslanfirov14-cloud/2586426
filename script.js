@@ -55,36 +55,24 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Фильтрация галереи
+// Фильтрация галереи (плавное появление/скрытие без резкого скачка сетки)
 document.addEventListener('DOMContentLoaded', function() {
     const filterBtns = document.querySelectorAll('.filter-btn');
     const galleryItems = document.querySelectorAll('.gallery-item');
-    
+
     if (filterBtns.length > 0 && galleryItems.length > 0) {
-        filterBtns.forEach(btn => {
+        function applyGalleryFilter(category) {
+            galleryItems.forEach((item) => {
+                const show = category === 'all' || item.dataset.category === category;
+                item.classList.toggle('gallery-item--hidden', !show);
+            });
+        }
+
+        filterBtns.forEach((btn) => {
             btn.addEventListener('click', function() {
-                // Удаляем активный класс у всех кнопок
-                filterBtns.forEach(b => b.classList.remove('active'));
-                // Добавляем активный класс текущей кнопке
+                filterBtns.forEach((b) => b.classList.remove('active'));
                 this.classList.add('active');
-                
-                const category = this.dataset.category;
-                
-                galleryItems.forEach(item => {
-                    if (category === 'all' || item.dataset.category === category) {
-                        item.style.display = 'block';
-                        setTimeout(() => {
-                            item.style.opacity = '1';
-                            item.style.transform = 'scale(1)';
-                        }, 10);
-                    } else {
-                        item.style.opacity = '0';
-                        item.style.transform = 'scale(0.8)';
-                        setTimeout(() => {
-                            item.style.display = 'none';
-                        }, 300);
-                    }
-                });
+                applyGalleryFilter(this.dataset.category);
             });
         });
     }
@@ -757,7 +745,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function renderBookings(bookings) {
         if (!bookings.length) {
-            bookingsList.innerHTML = '<p>Записей пока нет.</p>';
+            bookingsList.innerHTML = '<p>Нет записей, ожидающих подтверждения. После подтверждения или отмены они скрываются из списка.</p>';
             return;
         }
 
