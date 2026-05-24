@@ -120,7 +120,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Главный экран */
 .hero {
-    background-image: url("Главная/779_large.jpg");
+    background-image: linear-gradient(
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.4)
+        ),
+        url("Главная/779_large.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -138,14 +142,17 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-title {
     font-size: 3.5rem;
-    color: var(--text-dark);
+    color: #ffffff;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
     margin-bottom: 1.5rem;
     animation: fadeInUp 1s ease;
 }
 
 .hero-subtitle {
     font-size: 1.3rem;
-    color: var(--text-light);
+    color: #f5f0eb;
+    font-weight: 500;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
     margin-bottom: 2.5rem;
     animation: fadeInUp 1s ease 0.2s;
     animation-fill-mode: both;
