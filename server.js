@@ -40,6 +40,17 @@ app.get("/api/health", async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+async function startServer() {
+  try {
+    const { ensureAdminUser } = require("./src/utils/seedAdmin");
+    await ensureAdminUser();
+  } catch (error) {
+    console.error("Не удалось создать администратора:", error.message);
+  }
+
+  app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+  });
+}
+
+startServer();
